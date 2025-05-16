@@ -55,14 +55,14 @@ input[type="number"] {
 
 button {
     padding: 0.5rem 1rem;
-    background-color: #27ae60;
+    background-color: #6EB8F5;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #219150;
+    background-color: #6EB8F5;
 }
 
 #resultado {
@@ -89,6 +89,6 @@ ul li {
 }
 
 ul li a {
-    color: #27ae60;
+    color: #6EB8F5;
     text-decoration: none;
 }
