@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concrelaje</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Concrelaje</h1>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#orcamento">Orçamento</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="container">
+        <h2>Sobre Nós</h2>
+        <p>A Concrelaje é especializada em soluções em concreto armado e estruturas pré-moldadas. Trabalhamos com profissionalismo e qualidade para oferecer o melhor custo-benefício do mercado.</p>
+    </section>
+
+    <!-- Seção Orçamento -->
+    <section id="orcamento" class="container">
+        <h2>Calcule seu Orçamento</h2>
+        <form onsubmit="calcularOrcamento(event)">
+            <label for="metros">Quantos metros de longarina você precisa?</label>
+            <input type="number" id="metros" placeholder="Ex: 20" min="0" required>
+            <button type="submit">Calcular</button>
+        </form>
+        <p id="resultado"></p>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="container">
+        <h2>Entre em Contato</h2>
+        <ul>
+            <li><a href="https://wa.me/5511999999999 " target="_blank">WhatsApp</a></li>
+            <li><a href="https://instagram.com/concrelajeoficial " target="_blank">Instagram</a></li>
+        </ul>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Concrelaje. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function calcularOrcamento(event) {
+            event.preventDefault();
+            const metros = parseFloat(document.getElementById('metros').value);
+            const precoPorMetro = 5.00;
+            const total = metros * precoPorMetro;
+
+            if (isNaN(metros) || metros <= 0) {
+                document.getElementById('resultado').textContent = "Por favor, insira uma quantidade válida de metros.";
+            } else {
+                document.getElementById('resultado').textContent = `Seu orçamento para ${metros} metros é de R$${total.toFixed(2)}.`;
+            }
+        }
+    </script>
+
+</body>
+</html>
